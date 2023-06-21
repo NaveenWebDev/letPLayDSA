@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "javaBasic",
+            "request": "launch",
+            "mainClass": "javaBasic",
+            "projectName": "java_aefb759a"
+        },
+        {
+            "type": "java",
             "name": "Launch sort",
             "request": "launch",
             "mainClass": "sort",
