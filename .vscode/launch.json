@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "scanner",
+            "request": "launch",
+            "mainClass": "scanner",
+            "projectName": "java_aefb759a"
+        },
+        {
+            "type": "java",
             "name": "javaBasic",
             "request": "launch",
             "mainClass": "javaBasic",

@@ -6,9 +6,10 @@ public class javaBasic {
         // System.out.println(userName + " " +  numberOne);
 
         int numOne = 50;
-        int numTwo = 100;
-        int sum = numOne + numTwo;
-        System.out.println(sum);
+        double numTwo = 100;
+        
+        int total =(int) numTwo;
+        System.out.println(total);
 
   }
 }
