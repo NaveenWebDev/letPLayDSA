@@ -1,13 +1,12 @@
 public class function{
-    public static int hello(){
+    public static void hello(int a, int b){
         System.out.println("hello world");
         System.out.println("hello world");
         System.out.println("hello world");
-        return 1;
+        System.out.println("sum of a + b = " + (a + b));
     }
 
     public static void main(String[] args) {
-        System.out.println(hello());
-        
+        hello(5,5);
     }
 }
