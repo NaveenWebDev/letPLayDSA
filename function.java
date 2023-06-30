@@ -22,12 +22,22 @@ public class function{
         return f;
     }
 
+    public static int binomialcoefficient(int n, int r) {
+        int fact_n = factorial(n);
+        int fact_r = factorial(r);
+        int fact_number = factorial(n-r);
+
+        int binomialcoefficient = fact_n / (fact_r * fact_number);
+        return binomialcoefficient;
+    }
+
     public static void main(String[] args) {
         // hello(5,5);
         int a = 5;
         int b = 10;
+        System.out.println(binomialcoefficient(5, 2));
         // swap(a,b);
-        System.out.println(factorial(4));
+        // System.out.println(factorial(4));
 
     }
 }
