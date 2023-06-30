@@ -34,18 +34,34 @@ public class pattern{
         // }
         // ========================hallo ractangle pattern===============================
 
-        int n = 4;
-        for (int i = 1; i <=n ; i++) {
+        // int n = 4;
+        // for (int i = 1; i <=n ; i++) {
             
-            for (int j = 1; j <=5; j++) {
-                if(j == 1 || j == 5 || i == 1 || i == 4){
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
+        //     for (int j = 1; j <=5; j++) {
+        //         if(j == 1 || j == 5 || i == 1 || i == 4){
+        //             System.out.print("*");
+        //         }else{
+        //             System.out.print(" ");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+        // ========================INVERTED & ROTATED HALF-PYRAMID pattern===============================
+
+        int n = 6;
+        for (int i = 1; i <=n ; i++) {
+            for (int j = 1; j <=n-i+1; j++) {
+                System.out.print(" ");
             }
+            
+            for (int index = 1; index <=i; index++) {
+                System.out.print("*");
+            }
+
             System.out.println();
         }
+
+
 
 
     }
