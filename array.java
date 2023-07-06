@@ -6,13 +6,33 @@ public class array {
             arr[i] = arr[i] + 1;
         }
     }
+    public static int linearSearch(int arr[], int key){
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] == key){
+                return i;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
 
         int number[] = {97, 98, 99};
-        updateArry(number);
-        for (int i = 0; i < number.length; i++) {
-            System.out.println(number[i]);
+        int key = 984;
+
+        if(linearSearch(number, key) == -1){
+            System.out.println("not found");
+        }else{
+            System.out.println(linearSearch(number, key));
         }
+
+
+
+
+
+        // updateArry(number);
+        // for (int i = 0; i < number.length; i++) {
+        //     System.out.println(number[i]);
+        // }
 
 
 
