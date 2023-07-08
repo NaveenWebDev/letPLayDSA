@@ -33,13 +33,30 @@ public class array {
         }
         return -1;
     }
+    // ===================================array reverser code =======================
+
+    public static void reverseArray(int number[]){
+        int start = 0, end = number.length-1;
+
+        while(start < end){
+            int temp = number[end];
+            number[end] = number[start];
+            number[start] = temp;
+
+            start++;
+            end--;
+        }
+        }
 
     public static void main(String[] args) {
 
         int number[] = {97, 98, 99, 100, 101};
-        int key = 98;
-
-        System.out.println(binarySearch(number, key));
+        // int key = 98;
+        reverseArray(number);
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i] + " ");
+        }
+        // System.out.println(binarySearch(number, key));
         // if(linearSearch(number, key) == -1){
         //     System.out.println("not found");
         // }else{
