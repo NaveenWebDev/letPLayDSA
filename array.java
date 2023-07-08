@@ -1,39 +1,56 @@
 import java.util.*;
 
 public class array {
-    public static void updateArry(int arr[]){
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i] + 1;
-        }
-    }
-    public static int linearSearch(int arr[], int key){
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] == key){
-                return i;
+    // public static void updateArry(int arr[]){
+    //     for (int i = 0; i < arr.length; i++) {
+    //         arr[i] = arr[i] + 1;
+    //     }
+    // }
+    // public static int linearSearch(int arr[], int key){
+    //     for (int i = 0; i < arr.length; i++) {
+    //         if(arr[i] == key){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
+    // ==================================binary search==========================================
+
+    public static int binarySearch(int numbers[], int key){
+        int start = 0 , end = numbers.length-1;
+
+        while(start <= end){
+            int mid = (start + end)/2;
+            
+            if(numbers[mid] == key){
+                return mid;
+            }
+            if(numbers[mid] < key){
+                start =  mid+1;
+            }else{
+                end = mid+1;
             }
         }
         return -1;
     }
+
     public static void main(String[] args) {
 
-        int number[] = {97, 98, 99};
-        int key = 984;
+        int number[] = {97, 98, 99, 100, 101};
+        int key = 98;
 
-        if(linearSearch(number, key) == -1){
-            System.out.println("not found");
-        }else{
-            System.out.println(linearSearch(number, key));
-        }
-
-
-
+        System.out.println(binarySearch(number, key));
+        // if(linearSearch(number, key) == -1){
+        //     System.out.println("not found");
+        // }else{
+        //     System.out.println(linearSearch(number, key));
+        // }
 
 
         // updateArry(number);
         // for (int i = 0; i < number.length; i++) {
         //     System.out.println(number[i]);
         // }
-
 
 
 
