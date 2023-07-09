@@ -16,46 +16,62 @@ public class array {
     // }
     // ==================================binary search==========================================
 
-    public static int binarySearch(int numbers[], int key){
-        int start = 0 , end = numbers.length-1;
+    // public static int binarySearch(int numbers[], int key){
+    //     int start = 0 , end = numbers.length-1;
 
-        while(start <= end){
-            int mid = (start + end)/2;
+    //     while(start <= end){
+    //         int mid = (start + end)/2;
             
-            if(numbers[mid] == key){
-                return mid;
+    //         if(numbers[mid] == key){
+    //             return mid;
+    //         }
+    //         if(numbers[mid] < key){
+    //             start =  mid+1;
+    //         }else{
+    //             end = mid+1;
+    //         }
+    //     }
+    //     return -1;
+    // }
+    // // ===================================array reverser code =======================
+
+    // public static void reverseArray(int number[]){
+    //     int start = 0, end = number.length-1;
+
+    //     while(start < end){
+    //         int temp = number[end];
+    //         number[end] = number[start];
+    //         number[start] = temp;
+
+    //         start++;
+    //         end--;
+    //     }
+    //     }
+    public static void printParis(int number[]){
+        int totalPair = 0;
+        for (int i = 0; i < number.length; i++) {
+            int current = number[i];
+            for (int j = i+1; j < number.length; j++) {
+                System.out.print("(" + current + ", " + number[j] + ")");
+                totalPair++;
             }
-            if(numbers[mid] < key){
-                start =  mid+1;
-            }else{
-                end = mid+1;
-            }
+            System.out.println();
         }
-        return -1;
+        System.out.println("Number of pair is : " + totalPair);
     }
-    // ===================================array reverser code =======================
-
-    public static void reverseArray(int number[]){
-        int start = 0, end = number.length-1;
-
-        while(start < end){
-            int temp = number[end];
-            number[end] = number[start];
-            number[start] = temp;
-
-            start++;
-            end--;
-        }
-        }
 
     public static void main(String[] args) {
 
-        int number[] = {97, 98, 99, 100, 101};
+        int number[] = {2, 4, 6, 8, 10};
+        printParis(number);
+
+
+
         // int key = 98;
-        reverseArray(number);
-        for (int i = 0; i < number.length; i++) {
-            System.out.print(number[i] + " ");
-        }
+        // reverseArray(number);
+        // for (int i = 0; i < number.length; i++) {
+        //     System.out.print(number[i] + " ");
+        // }
         // System.out.println(binarySearch(number, key));
         // if(linearSearch(number, key) == -1){
         //     System.out.println("not found");
