@@ -47,26 +47,43 @@ public class array {
     //         end--;
     //     }
     //     }
-    public static void printParis(int number[]){
-        int totalPair = 0;
+    // public static void printParis(int number[]){
+    //     int totalPair = 0;
+    //     for (int i = 0; i < number.length; i++) {
+    //         int current = number[i];
+    //         for (int j = i+1; j < number.length; j++) {
+    //             System.out.print("(" + current + ", " + number[j] + ")");
+    //             totalPair++;
+    //         }
+    //         System.out.println();
+    //     }
+    //     System.out.println("Number of pair is : " + totalPair);
+    // }
+    // =================================print subarrays================================
+
+    public static void printSubArray(int number[]){
+        int totalSubArray = 0;
         for (int i = 0; i < number.length; i++) {
-            int current = number[i];
-            for (int j = i+1; j < number.length; j++) {
-                System.out.print("(" + current + ", " + number[j] + ")");
-                totalPair++;
+            for (int j = i; j < number.length; j++) {
+                for (int j2 = i; j2 <=j; j2++) {
+                    System.out.print(number[j2] + " ");
+                }
+                totalSubArray++;
+                System.out.println();
             }
             System.out.println();
         }
-        System.out.println("Number of pair is : " + totalPair);
+        System.out.println("Total subarray is : " + totalSubArray);
     }
 
     public static void main(String[] args) {
 
         int number[] = {2, 4, 6, 8, 10};
-        printParis(number);
-
-
-
+        printSubArray(number);
+        
+        
+        
+        // printParis(number);
         // int key = 98;
         // reverseArray(number);
         // for (int i = 0; i < number.length; i++) {
