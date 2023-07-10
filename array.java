@@ -75,21 +75,21 @@ public class array {
         }
         System.out.println("Total subarray is : " + totalSubArray);
     }
-    public static void binToDec(int binNum){
-        int myNum = binNum;
+    public static void dectoBin(int n){
+        int myNum = n;
         int pow = 0;
-        int decNum = 0;
+        int binNum = 0;
 
-        while (binNum > 0) {
-            int lastDigit = binNum % 10;
-            decNum = decNum + (lastDigit * (int)Math.pow(2,pow));
+        while (n > 0) {
+            int remainder = n % 2;
+            binNum = binNum + (remainder * (int)Math.pow(10,pow));
             pow++;
-            binNum = binNum / 10;
+            n = n / 2;
         }
-        System.out.println("decimal of " + myNum + " = " + decNum);
+        System.out.println("binary of " + myNum + " = " + binNum);
     }
     public static void main(String[] args) {
-        binToDec(1000);
+        dectoBin(5);
         // int number[] = {2, 4, 6, 8, 10};
         // printSubArray(number);
         
