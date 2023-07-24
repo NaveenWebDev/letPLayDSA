@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "array",
+            "request": "launch",
+            "mainClass": "array",
+            "projectName": "letPLayDSA_c026f0db"
+        },
+        {
+            "type": "java",
             "name": "scanner",
             "request": "launch",
             "mainClass": "scanner",
